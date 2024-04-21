@@ -18,3 +18,19 @@ int ft_isalpha(int c)
         return 1;
     return 0;
 }
+
+#include <stdio.h>
+int	main()
+{
+	int	i = 42;
+	if(ft_isalpha(i))
+		printf("%d is alpha \n", i);
+	else
+		printf("%d is not alpha \n", i);
+
+	if(isalpha(i))
+		printf("%d is alpha \n", i);
+	else
+		printf("%d is not alpha \n", i);
+	return 0;
+}

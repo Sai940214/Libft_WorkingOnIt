@@ -23,3 +23,14 @@ size_t  ft_strlen(const char *s)
         i++;
     return  (i);
 }
+
+#include <stdio.h>
+int main()
+{
+    char* str = "meowmeow";
+    int i = ft_strlen(str);
+    int j = strlen(str);
+
+    printf("%d \n",i);
+    printf("%d \n",j);
+}

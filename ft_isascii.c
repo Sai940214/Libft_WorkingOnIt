@@ -18,3 +18,19 @@ int ft_isascii(int c)
          return 1;
     return 0;
 }
+
+#include <stdio.h>
+int	main()
+{
+	int	i = 42;
+	if(ft_isascii(i))
+		printf("%d is ascii \n", i);
+	else
+		printf("%d is not ascii \n", i);
+
+	if(isascii(i))
+		printf("%d is ascii \n", i);
+	else
+		printf("%d is not ascii \n", i);
+	return 0;
+}

@@ -22,5 +22,15 @@ int ft_isalnum(int c)
 #include <stdio.h>
 int	main()
 {
-	int	c = 23
+	int	i = 42;
+	if(ft_isalnum(i))
+		printf("%d is alnum \n", i);
+	else
+		printf("%d is not alnum \n", i);
+
+	if(isalnum(i))
+		printf("%d is alnum \n", i);
+	else
+		printf("%d is not alnum \n", i);
+	return 0;
 }

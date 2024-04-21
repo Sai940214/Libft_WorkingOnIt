@@ -18,3 +18,19 @@ int ft_isprint(int c)
         return 1;
     return 0;
 }
+
+#include <stdio.h>
+int	main()
+{
+	int	i = 42;
+	if(ft_isprint(i))
+		printf("%d can print \n", i);
+	else
+		printf("%d cant print \n", i);
+
+	if(isprint(i))
+		printf("%d can print \n", i);
+	else
+		printf("%d cant print \n", i);
+	return 0;
+}
