@@ -26,3 +26,24 @@ void    ft_bzero(void *s, size_t n)
         i++;
     }
 }
+
+#include<stdio.h>
+int main()
+{
+    char str[] = "Hello";
+    ft_bzero(str, 5);
+    char str2[] = "Hello";
+    bzero(str2, 5);
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", str[i]); 
+    }
+    printf("\n");
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", str2[i]); 
+    }
+    printf("\n");
+
+    return 0;
+}
