@@ -32,7 +32,7 @@ void *     ft_memset(void *b, int c, size_t len)
 #include <stdio.h>
 int main()
 {
-    char str[5];
+    char str[5] = "Hello";
     
     ft_memset(str,'S',sizeof(str));
     printf("%s\n",str);
