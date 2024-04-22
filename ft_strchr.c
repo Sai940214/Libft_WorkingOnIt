@@ -33,17 +33,17 @@ char *ft_strchr(const char *s, int c)
 
 int main() {
     const char *str = "Hello, World!"; 
-    int charsToTest[] = {'H', '!', 'x', '\0'}; 
+    int Test[] = {'H', '!', 'x', '\0'}; 
     char *result;
 
     for (int i = 0; i < 5; i++) { 
-        result = ft_strchr(str, charsToTest[i]); 
+        result = ft_strchr(str, Test[i]); 
         if (result != NULL) {
-            printf("'%c' found at %ld in \"%s\"\n",
-                   charsToTest[i], result - str, str); 
+            printf("'%c' found at %ld \n",
+                   Test[i], result - str, str); 
         } else {
-            printf("'%c' not found in \"%s\"\n",
-                   charsToTest[i], str);
+            printf("not found \n",
+                   Test[i], str);
         }
     }
     return 0;
