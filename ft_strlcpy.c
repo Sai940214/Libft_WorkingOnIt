@@ -19,12 +19,16 @@ size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize
 
 	i = 0;
 	j = 0;
-	while (dst[i] != '\0' && i < dstsize)
-		i++;
-	while (src[j] != '\0' && i + j + 1 < dstsize)
-	{
-		dst[i + j] = src[j];
-		j++;
+	if (!dst || !src)
+		return 0;
+	if(dstsize != '\0'){
+		while (dst[i] != '\0' && i < dstsize)
+			i++;
+		while (src[j] != '\0' && i + j + 1 < dstsize)
+		{
+			dst[i + j] = src[j];
+			j++;
+		}
 	}
 	dst[i + j]='\0';
 		return i + j;
@@ -35,7 +39,7 @@ size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize
 
 
 int main() {
-    char dest[20] = "Hello, ";
+    char dest[20] = "Hello, asdasd";
     const char *src = "world!";
     size_t dstsize = sizeof(dest);
 
