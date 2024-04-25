@@ -26,12 +26,12 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 	  ft_substr.c ft_strjoin.c ft_strtrim.c \
 	  ft_split.c ft_itoa.c ft_strmapi.c \
 	  ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
-	  ft_putendl_fd.c ft_putnbr_fd.c \
+	  ft_putendl_fd.c ft_putnbr_fd.c
 # $(variable:pattern=replacement)
 OBJS	= $(SRCS:.c=.o)
 
 %.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 # -c $< means 1st prerequisite(which is .c) -o $@ means 2nd prerequisite(which is .o)
 # 这里，$< 将会展开成与目标（%.o）对应的 .c 文件名。这允许 Makefile 中的单条规则自动匹配并处理多个文件依赖关系。
 
